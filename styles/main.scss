@@ -1,0 +1,22 @@
+
+$mainfont:'Fredoka One', cursive;
+
+$secondfont:  'Rubik', sans-serif;
+
+*{
+margin:0;
+
+
+}
+
+
+
+.juego{
+    background-image: url('../img/fondo.png');
+    width:474px;
+    height:843px;
+}
+
+h4{
+    font-family: $mainfont;
+}
