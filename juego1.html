@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,61 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body>
-    <div class="juego">
 
-        <div>
-            <a href="">
-                <img src="./img/back.png" alt="">
-            </a>
 
-            <div class="mundo">
-                <h4 class="nivel">Memoria Sensorial</h4>
-                <hr>
-            </div>
+    <div class="mundo">
+        <a href="" class="back">
+            <img src="./img/back.png" alt="">
+        </a>
+
+        <div class="text">
+            <h4 class="nivel">Memoria Sensorial</h4>
+            <hr>
         </div>
-       
-        <h4>Observa la siguiente imagen durante 3 segundos</h4>
+    </div>
+    <div class="juego" >
 
-        <button>Empezar</button>
+        <div class="content">
+
+            <h4 class="instruccion">Observa la siguiente imagen durante 3 segundos</h4>
+
+            <img class="imagen_juego" src="./img/juego1.png" alt="">
+
+        </div>
 
     </div>
-  
+
+    <div class="preguntas" style="display:none">
+        <div class="content">
+            <h4 class="instruccion">Basándote en la imagen anterior, responde las siguientes preguntas:</h4>
+
+            <div class="pregunta">
+                <h4 class="pregunta__txt">¿Qué zona de la casa se presenta
+                    en la imagen?</h4>
+                <input type="text"  class="pregunta__resp" placeholder="Escribe tu respuesta">
+            </div>
+
+            <div class="pregunta">
+                <h4 class="pregunta__txt">¿Cuántos cuadros hay?</h4>
+                <input type="text"  class="pregunta__resp" placeholder="Escribe tu respuesta">
+            </div>
+
+            <div class="pregunta">
+                <h4 class="pregunta__txt">¿Hay un gato en la imagen?</h4>
+                <input type="text" class="pregunta__resp" placeholder="Escribe tu respuesta">
+            </div>
+
+            <button class="enviar">Enviar</button>
+            <a href="" class="saltar">Saltar</a>
+
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+
 </body>
+
 </html>

@@ -1,22 +1,189 @@
+$mainfont:'Fredoka One',
+cursive;
 
-$mainfont:'Fredoka One', cursive;
+$secondfont: 'Rubik',
+sans-serif;
 
-$secondfont:  'Rubik', sans-serif;
+$colorTitulo: #F65380;
+$colorLetra: #686767;
+$colorBotones: #8C5DF1;
 
-*{
-margin:0;
+* {
+    margin: 0;
 
 
 }
 
 
-
-.juego{
+body {
     background-image: url('../img/fondo.png');
-    width:474px;
-    height:843px;
+   
 }
 
-h4{
-    font-family: $mainfont;
+
+
+.mundo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+
+    margin: 30px;
+
+    .back {
+        >img {
+            width: 30px;
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 40px;
+        width: 280px;
+
+        .nivel {
+            font-family: $mainfont;
+            color: $colorTitulo;
+            font-size: 25px;
+
+        }
+
+        hr {
+            margin-top: 20px;
+            width: 100%;
+            align-self: center;
+
+        }
+    }
+}
+
+
+
+
+.juego {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width:100%;
+
+    .content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    .instruccion {
+
+        width: 300px;
+        font-family: $secondfont;
+        color: $colorLetra;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 100px;
+        // margin-right: 70px;
+
+    }
+
+    .imagen_juego{
+        margin-top: 100px;
+    }
+
+
+}
+
+.preguntas{
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width:100%;
+
+    .content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .instruccion {
+
+       
+        font-family: $secondfont;
+        color: $colorLetra;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+        // margin-right: 70px;
+        margin-bottom: 50px;
+
+    }
+
+    .pregunta{
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: flex-start;
+       margin-bottom: 50px;
+       width: 100%;
+
+        &__txt{
+            
+            font-family: $secondfont;
+            color: $colorLetra;
+            font-size: 20px;
+            text-align: left;
+         
+        }
+
+        &__resp{
+            width:360px;
+            height:40px;
+            font-family: $secondfont;
+            background: #F3F3F3;
+            color: #A1A5A8;
+            border-radius: 20px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        
+
+    }
+    .enviar{
+        background-color: $colorBotones;
+        border-radius: 20px;
+        border:none;
+        font-family: $mainfont;
+        color:white;
+        width:190px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .saltar{
+        margin-top:15px;
+        font-family: $mainfont;
+        text-decoration: none;
+        color:$colorLetra;
+        font-size: 16px;
+    }
+
 }
