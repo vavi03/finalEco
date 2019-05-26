@@ -1,14 +1,14 @@
-//juego 1
+
 
 var juego1img= document.querySelector('.juego');
 var juego1preguntas= document.querySelector('.preguntas');
 
-function cambiarPantallaJuego1(){
-    var t= setTimeout("juego1cambio()",3000);
+function cambiarPantallaJuego(){
+    var t= setTimeout("juegocambio()",3000);
 }
-cambiarPantallaJuego1();
+cambiarPantallaJuego();
 
-function juego1cambio(){
+function juegocambio(){
     juego1img.style.display= "none";
    console.log("cambie");
    juego1preguntas.style.display= "flex";

@@ -1,11 +1,17 @@
-var btnEmpezarJuego21= document.querySelector('.continuarJuego4');
-var juegoimg= document.querySelector('.juego');
-var juegopreguntas= document.querySelector('.preguntas');
+var juego1img= document.querySelector('.juego');
+var juego1preguntas= document.querySelector('.preguntas');
 
-btnEmpezarJuego21.addEventListener('click', function(){
+function cambiarPantallaJuego1(){
+    var t= setTimeout("juego1cambio()",3000);
+}
+cambiarPantallaJuego1();
 
-    juegoimg.style.display= "none";
-    console.log("cambie");
-    juegopreguntas.style.display= "flex";
+function juego1cambio(){
+    juego1img.style.display= "none";
+   console.log("cambie");
+   juego1preguntas.style.display= "flex";
+}
 
-}); 
+function batman(){
+    
+}

@@ -17,7 +17,7 @@ $colorBotones: #8C5DF1;
 
 body {
     background-image: url('../img/fondo.png');
-   
+
 }
 
 
@@ -46,13 +46,14 @@ body {
         width: 280px;
 
         .nivel {
-            font-family: $mainfont;
+            font-family: $secondfont;
             color: $colorTitulo;
             font-size: 25px;
 
         }
+
         .nivel2-1 {
-            font-family: $mainfont;
+            font-family: $secondfont;
             color: $colorTitulo;
             font-size: 25px;
             text-align: center;
@@ -78,7 +79,7 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
-    width:100%;
+    width: 100%;
 
     .content {
         width: 80%;
@@ -89,16 +90,16 @@ body {
         align-items: center;
 
 
-        .continuar{
+        .continuar {
             background-color: $colorBotones;
             border-radius: 20px;
-            border:none;
+            border: none;
             font-family: $mainfont;
-            color:white;
-            width:190px;
+            color: white;
+            width: 190px;
             height: 50px;
             font-size: 20px;
-            margin-top:100px;
+            margin-top: 100px;
         }
     }
 
@@ -114,48 +115,69 @@ body {
 
     }
 
-    .imagen_juego{
+    .imagen_juego {
         margin-top: 100px;
     }
 
-    .imagen_juego4{
+    .imagen_juego4 {
         margin-top: 50px;
     }
 
-    .continuarJuego{
+    .continuarJuego {
         background-color: $colorBotones;
         border-radius: 20px;
-        border:none;
+        border: none;
         font-family: $mainfont;
-        color:white;
-        width:190px;
+        color: white;
+        width: 190px;
         height: 50px;
         font-size: 20px;
-        margin-top:100px;
+        margin-top: 100px;
 
     }
 
-    .continuarJuego4{
+    .continuarJuego4 {
         background-color: $colorBotones;
         border-radius: 20px;
-        border:none;
+        border: none;
         font-family: $mainfont;
-        color:white;
-        width:190px;
+        color: white;
+        width: 190px;
         height: 50px;
         font-size: 20px;
-        margin-top:40px;
+        margin-top: 40px;
 
     }
-   
 
-   
-  
+
+    .tiempo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        margin-top:20px;
+
+        .timer{
+            width:72px;
+            font-family: $secondfont;
+            background: $colorBotones;
+            border-radius:20px;
+            color:white;
+            text-align: center;
+            height: 20px;
+          
+           
+           
+        }
+    }
+
 
 
 }
 
-.preguntas{
+.preguntas {
 
 
     display: flex;
@@ -163,7 +185,7 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
-    width:100%;
+    width: 100%;
 
     .content {
         width: 80%;
@@ -174,41 +196,75 @@ body {
         align-items: center;
         flex-wrap: wrap;
     }
+
     .instruccion {
 
-       
+
         font-family: $secondfont;
         color: $colorLetra;
         font-size: 20px;
         text-align: center;
         margin-top: 80px;
         // margin-right: 70px;
-        margin-bottom: 50px;
-       
+        margin-bottom: 30px;
+
     }
 
-    .pregunta{
-      
+    .personaje{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        flex-wrap: wrap;
+        height: 400px;
+        margin-bottom: 40px;
+
+        .preguntaImg{
+            width:50%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .nombrePsj{
+            width:80%;
+            text-align: center;
+            height: 40px;
+            font-family: $secondfont;
+            background: #F3F3F3;
+            color: #A1A5A8;
+            border-radius: 20px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    }
+
+    
+
+    .pregunta {
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: flex-start;
         align-items: flex-start;
-       margin-bottom: 50px;
-       width: 100%;
+        margin-bottom: 50px;
+        width: 100%;
 
-        &__txt{
-            
+        &__txt {
+
             font-family: $secondfont;
             color: $colorLetra;
             font-size: 20px;
             text-align: left;
-           
+
         }
 
-        &__resp{
-            width:360px;
-            height:40px;
+        &__resp {
+            width: 360px;
+            height: 40px;
             font-family: $secondfont;
             background: #F3F3F3;
             color: #A1A5A8;
@@ -217,37 +273,38 @@ body {
             font-size: 16px;
         }
 
-        
+
 
     }
-    .enviar{
+
+    .enviar {
         background-color: $colorBotones;
         border-radius: 20px;
-        border:none;
+        border: none;
         font-family: $mainfont;
-        color:white;
-        width:190px;
+        color: white;
+        width: 190px;
         height: 50px;
         font-size: 20px;
     }
 
-    .enviar2-1{
+    .enviar2-1 {
         background-color: $colorBotones;
         border-radius: 20px;
-        border:none;
+        border: none;
         font-family: $mainfont;
-        color:white;
-        width:190px;
+        color: white;
+        width: 190px;
         height: 50px;
         font-size: 20px;
         margin-top: 280px;
     }
 
-    .saltar{
-        margin-top:15px;
+    .saltar {
+        margin-top: 15px;
         font-family: $mainfont;
         text-decoration: none;
-        color:$colorLetra;
+        color: $colorLetra;
         font-size: 16px;
     }
 
