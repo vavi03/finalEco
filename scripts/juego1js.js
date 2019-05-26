@@ -1,7 +1,7 @@
 //juego 1
 
-var juego1img= document.querySelector('.juego1');
-var juego1preguntas= document.querySelector('.preguntas1');
+var juego1img= document.querySelector('.juego');
+var juego1preguntas= document.querySelector('.preguntas');
 
 function cambiarPantallaJuego1(){
     var t= setTimeout("juego1cambio()",3000);

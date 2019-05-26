@@ -1,4 +1,4 @@
-var btnEmpezarJuego21= document.querySelector('.continuarJuego');
+var btnEmpezarJuego21= document.querySelector('.continuarJuego4');
 var juegoimg= document.querySelector('.juego');
 var juegopreguntas= document.querySelector('.preguntas');
 
@@ -8,4 +8,4 @@ btnEmpezarJuego21.addEventListener('click', function(){
     console.log("cambie");
     juegopreguntas.style.display= "flex";
 
-});
+}); 

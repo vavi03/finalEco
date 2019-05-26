@@ -1,4 +1,4 @@
-var btnEmpezarJuego21= document.querySelector('.continuarJuego2-2');
+var btnEmpezarJuego21= document.querySelector('.continuarJuego');
 var juegoimg= document.querySelector('.juego');
 var juegopreguntas= document.querySelector('.preguntas');
 
