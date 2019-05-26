@@ -115,13 +115,30 @@ body {
 
     }
 
+    .espacioImg{
+        margin:0;
+        height:auto;
+        position: relative;
+        width:100%;
+        height:318px;
+        background: url('../img/juego4.png');
+        margin-top: 60px;
+    }
+
     .imagen_juego {
         margin-top: 100px;
     }
 
-    .imagen_juego4 {
+    .imagen_juego5 {
         margin-top: 50px;
     }
+
+    .batman{
+        position:absolute;
+        top:15px;
+        width:50px;
+    }
+
 
     .continuarJuego {
         background-color: $colorBotones;

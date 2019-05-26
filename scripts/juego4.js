@@ -1,17 +1,47 @@
-var juego1img= document.querySelector('.juego');
-var juego1preguntas= document.querySelector('.preguntas');
+var juegoimg= document.querySelector('.juego');
+var juegopreguntas= document.querySelector('.preguntas');
 
-function cambiarPantallaJuego1(){
-    var t= setTimeout("juego1cambio()",3000);
+var batmanimg= document.querySelector('.batman')
+var timer= document.querySelector('.timer');
+var contador= 15;
+function cambiarPantallaJuego(){
+    var t= setTimeout("juegocambio()",15000);
 }
-cambiarPantallaJuego1();
+cambiarPantallaJuego();
 
-function juego1cambio(){
-    juego1img.style.display= "none";
+function cambioTiempo(){
+    var x= setInterval("reducirTiempo()",1000);
+}
+
+cambioTiempo();
+function reducirTiempo(){
+contador--;
+timer.innerHTML= "00:"+ contador;
+if(contador<10){
+    timer.innerHTML= "00:0"+ contador;
+}
+}
+function juegocambio(){
+    juegoimg.style.display= "none";
    console.log("cambie");
-   juego1preguntas.style.display= "flex";
+   juegopreguntas.style.display= "flex";
 }
+
+function apareceBatman(){
+    var x= setInterval("batman()",900);
+}
+apareceBatman();
 
 function batman(){
-    
+    var min= 50;
+    var max= 200;
+    if(contador%5==0){
+        var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+        batmanimg.style.display="flex";
+        batmanimg.style.left=random + "px";
+        batmanimg.style.top=random + "px";
+    }
+    else{
+        batmanimg.style.display="none";
+    }
 }
