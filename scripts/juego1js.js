@@ -45,8 +45,9 @@ function escribirRespuestas() {
     respuesta[2] = document.querySelectorAll(".pregunta__resp")[2].value|"";
 
 
+
     //firebase
-    database.ref('usuarios/'+userId+'/resp/1').push({
+    database.ref('usuarios/'+userId+'/resp/1').set({
         soluciones: respuestas
     }, function (error) {
         if (error) {
@@ -64,6 +65,6 @@ let inputRespuesta = document.querySelectorAll(".pregunta__resp");
 for (let index = 0; index < inputRespuesta.length; index++) {
     const element = inputRespuesta[index];
 
-    element.addEventListener('change', escribirRespuestas);
+    element.addEventListener('click', escribirRespuestas);
     
 }
