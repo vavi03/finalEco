@@ -36,20 +36,27 @@ function juegocambio() {
 
 //firebase
 
-function escribirRespuestas(){
+function escribirRespuestas() {
 
     var respuestas = [];
 
     respuesta[0] = "";
     respuesta[1] = "";
     respuesta[2] = "";
-    
-    
-    //firebase
-        
-    //
 
-    location.href = "https://vavi03.github.io/finaEco/juego1.html";
+
+    //firebase
+    database.ref('users/' + userId + '/respuestas/1/').set({
+        soluciones: respuestas
+    }, function (error) {
+        if (error) {
+            // The write failed...
+        } else {
+            // Data saved successfully!
+            location.href = "https://vavi03.github.io/finaEco/juego1.html";
+        }
+    });
+    //
 }
 
 let btnEnviar = document.querySelector("#btnEnviar");
