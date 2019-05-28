@@ -40,9 +40,9 @@ function escribirRespuestas() {
 
     var respuestas = [];
 
-    respuesta[0] = "";
-    respuesta[1] = "";
-    respuesta[2] = "";
+    respuesta[0] = document.querySelectorAll(".pregunta__resp")[0].value|"";
+    respuesta[1] = document.querySelectorAll(".pregunta__resp")[1].value|"";
+    respuesta[2] = document.querySelectorAll(".pregunta__resp")[2].value|"";
 
 
     //firebase
@@ -55,11 +55,15 @@ function escribirRespuestas() {
             // Data saved successfully!
             
         }
-        window.location.href = "https://vavi03.github.io/finaEco/juego1.html";
     });
     //
 }
 
-let btnEnviar = document.querySelector("#btnEnviar");
+let inputRespuesta = document.querySelectorAll(".pregunta__resp");
 
-btnEnviar.addEventListener('click', escribirRespuestas);
+for (let index = 0; index < inputRespuesta.length; index++) {
+    const element = inputRespuesta[index];
+
+    element.addEventListener('change', escribirRespuestas);
+    
+}
