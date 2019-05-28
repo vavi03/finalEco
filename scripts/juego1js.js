@@ -46,7 +46,7 @@ function escribirRespuestas() {
 
 
     //firebase
-    database.ref('users/' + userId + '/respuestas/1/').set({
+    database.ref('usuarios/' + userId + '/respuestas/1/').set({
         soluciones: respuestas
     }, function (error) {
         if (error) {
