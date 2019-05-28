@@ -46,7 +46,7 @@ function escribirRespuestas() {
 
 
     //firebase
-    database.ref('usuarios').child(userId).child("respuestas").child("1").set({
+    database.ref('usuarios/'+userId+'/resp/1').push({
         soluciones: respuestas
     }, function (error) {
         if (error) {
