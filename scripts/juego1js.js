@@ -55,7 +55,7 @@ function escribirRespuestas() {
             // Data saved successfully!
             
         }
-        location.href = "https://vavi03.github.io/finaEco/juego1.html";
+        window.location.href = "https://vavi03.github.io/finaEco/juego1.html";
     });
     //
 }
