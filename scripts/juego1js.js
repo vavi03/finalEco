@@ -40,14 +40,14 @@ function escribirRespuestas() {
 
     var respuestas = [];
 
-    respuestas[0] = document.querySelectorAll(".pregunta__resp")[0].value|"";
-    respuestas[1] = document.querySelectorAll(".pregunta__resp")[1].value|"";
-    respuestas[2] = document.querySelectorAll(".pregunta__resp")[2].value|"";
+    respuestas[0] = document.querySelectorAll(".pregunta__resp")[0].value;
+    respuestas[1] = document.querySelectorAll(".pregunta__resp")[1].value;
+    respuestas[2] = document.querySelectorAll(".pregunta__resp")[2].value;
 
 
 
     //firebase
-    database.ref('usuarios/'+ "ztX3Y7cs89de9fmoF1UgF6eZgci2" +'/resp').set({
+    database.ref('usuarios/'+ userId +'/resp').set({
         "1": respuestas
     }, function (error) {
         if (error) {
