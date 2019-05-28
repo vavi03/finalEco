@@ -55,6 +55,8 @@ function escribirRespuestas() {
         } else {
             // Data saved successfully!
             console.log("Hecho");
+
+            window.location.href="https://vavi03.github.io/finalEco/juego1.html";
         }
     });
     //
