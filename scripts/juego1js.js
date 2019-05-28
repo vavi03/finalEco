@@ -60,11 +60,6 @@ function escribirRespuestas() {
     //
 }
 
-let inputRespuesta = document.querySelectorAll(".pregunta__resp");
+let inputEnviar = document.querySelector("#enviarA");
 
-for (let index = 0; index < inputRespuesta.length; index++) {
-    const element = inputRespuesta[index];
-
-    element.addEventListener('change', escribirRespuestas);
-    
-}
+inputEnviar.addEventListener('click',escribirRespuestas);
