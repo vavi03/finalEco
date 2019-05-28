@@ -40,21 +40,21 @@ function escribirRespuestas() {
 
     var respuestas = [];
 
-    respuesta[0] = document.querySelectorAll(".pregunta__resp")[0].value|"";
-    respuesta[1] = document.querySelectorAll(".pregunta__resp")[1].value|"";
-    respuesta[2] = document.querySelectorAll(".pregunta__resp")[2].value|"";
+    respuestas[0] = document.querySelectorAll(".pregunta__resp")[0].value|"";
+    respuestas[1] = document.querySelectorAll(".pregunta__resp")[1].value|"";
+    respuestas[2] = document.querySelectorAll(".pregunta__resp")[2].value|"";
 
 
 
     //firebase
-    database.ref('usuarios/'+userId+'/resp/1').set({
+    database.ref('usuarios/'+ 0 +'/resp/1').set({
         soluciones: respuestas
     }, function (error) {
         if (error) {
             // The write failed...
         } else {
             // Data saved successfully!
-            
+            console.log("Hecho");
         }
     });
     //
@@ -65,6 +65,6 @@ let inputRespuesta = document.querySelectorAll(".pregunta__resp");
 for (let index = 0; index < inputRespuesta.length; index++) {
     const element = inputRespuesta[index];
 
-    element.addEventListener('click', escribirRespuestas);
+    element.addEventListener('change', escribirRespuestas);
     
 }
