@@ -47,8 +47,8 @@ function escribirRespuestas() {
 
 
     //firebase
-    database.ref('usuarios/'+ "ztX3Y7cs89de9fmoF1UgF6eZgci2" +'/resp/1').set({
-        soluciones: respuestas
+    database.ref('usuarios/'+ "ztX3Y7cs89de9fmoF1UgF6eZgci2" +'/resp').set({
+        "1": respuestas
     }, function (error) {
         if (error) {
             // The write failed...
