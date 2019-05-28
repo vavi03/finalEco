@@ -1,15 +1,10 @@
 var juegoimg = document.querySelector('.juego');
-
+var botonCambio= document.querySelector('.btn_find2');
 
 
 var timer = document.querySelector('.timer');
 var contador = 60;
-/*
-function cambiarPantallaJuego(){
-    var t= setTimeout("juegocambio()",60000);
-}
-cambiarPantallaJuego();
-*/
+
 function cambioTiempo() {
     var x = setInterval("reducirTiempo()", 1000);
 }
@@ -32,3 +27,7 @@ function juegocambio() {
     console.log("cambie");
     juegopreguntas.style.display = "flex";
 }
+
+botonCambio.addEventListener('click', function(){
+    console.log("encontre");
+});
