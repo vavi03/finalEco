@@ -27,10 +27,11 @@ body {
 .mundo {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
+    align-items:center;
 
-    margin: 30px;
+    
 
     .back {
         >img {
