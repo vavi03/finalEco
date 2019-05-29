@@ -14,29 +14,57 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 
-var juego1img = document.querySelector('.juego');
-var juego1preguntas = document.querySelector('.preguntas');
 
-function cambiarPantallaJuego() {
-    var t = setTimeout("juegocambio()", 3000);
+
+var juegoimg = document.querySelector('.juego');
+var botonCambio= document.querySelector('.btn_find2');
+
+
+var timer = document.querySelector('.timer');
+var contador = 60;
+
+function cambioTiempo() {
+    var x = setInterval("reducirTiempo()", 1000);
 }
-cambiarPantallaJuego();
+
+cambioTiempo();
+
+function reducirTiempo() {
+    contador--;
+    timer.innerHTML = "00:" + contador;
+    if (contador == 60) {
+        timer.innerHTML = "01:00" + contador;
+    }
+    if (contador < 10) {
+        timer.innerHTML = "00:0" + contador;
+    }
+}
 
 function juegocambio() {
-    juego1img.style.display = "none";
+    juegoimg.style.display = "none";
     console.log("cambie");
-    juego1preguntas.style.display = "flex";
+    juegopreguntas.style.display = "flex";
 }
 
-//firebase
+botonCambio.addEventListener('click', function(){
+    console.log("encontre");
+});
 
+//firebase
+let inputEnviar = document.querySelector("#enviarA");
 function escribirRespuestas() {
 
     var respuestas = [];
 
-    respuestas[0] = document.querySelectorAll(".pregunta__resp")[0].value;
-    respuestas[1] = document.querySelectorAll(".pregunta__resp")[1].value;
-    respuestas[2] = document.querySelectorAll(".pregunta__resp")[2].value;
+    
+    if(inputEnviar.clicked==true){
+        respuestas[0] = "true";
+
+    }
+    else{
+        respuestas[0] = "false";
+    }
+   
 
     //firebase
     database.ref('usuarios/'+ userId +'/resp').set({
@@ -54,6 +82,6 @@ function escribirRespuestas() {
     //
 }
 
-let inputEnviar = document.querySelector("#enviarA");
+
 
 inputEnviar.addEventListener('click',escribirRespuestas);

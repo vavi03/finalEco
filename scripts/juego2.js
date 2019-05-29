@@ -14,19 +14,17 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 
-var juego1img = document.querySelector('.juego');
-var juego1preguntas = document.querySelector('.preguntas');
+var btnEmpezarJuego21= document.querySelector('.continuarJuego');
+var juegoimg= document.querySelector('.juego');
+var juegopreguntas= document.querySelector('.preguntas');
 
-function cambiarPantallaJuego() {
-    var t = setTimeout("juegocambio()", 3000);
-}
-cambiarPantallaJuego();
+btnEmpezarJuego21.addEventListener('click', function(){
 
-function juegocambio() {
-    juego1img.style.display = "none";
+    juegoimg.style.display= "none";
     console.log("cambie");
-    juego1preguntas.style.display = "flex";
-}
+    juegopreguntas.style.display= "flex";
+
+});
 
 //firebase
 
@@ -34,13 +32,12 @@ function escribirRespuestas() {
 
     var respuestas = [];
 
-    respuestas[0] = document.querySelectorAll(".pregunta__resp")[0].value;
-    respuestas[1] = document.querySelectorAll(".pregunta__resp")[1].value;
-    respuestas[2] = document.querySelectorAll(".pregunta__resp")[2].value;
+    respuestas[0] = document.querySelector(".pregunta__resp").value;
+   
 
     //firebase
     database.ref('usuarios/'+ userId +'/resp').set({
-        "1": respuestas
+        "2": respuestas
     }, function (error) {
         if (error) {
             // The write failed...
