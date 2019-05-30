@@ -39,8 +39,8 @@ function escribirRespuestas() {
     resp1[2] = document.querySelectorAll(".pregunta__resp")[2].value;
 
     //firebase
-    database.ref('usuarios/'+ userId+ "/").set({
-        resp1
+    database.ref('usuarios').child(userId).set({
+        resp1:resp1
     }, function (error) {
         if (error) {
             // The write failed...
