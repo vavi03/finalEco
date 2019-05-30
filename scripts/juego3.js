@@ -40,7 +40,7 @@ function escribirRespuestas() {
     respuestas[2] = document.querySelectorAll(".nombrePsj")[2].value;
     respuestas[3] = document.querySelectorAll(".nombrePsj")[3].value;
     //firebase
-    database.ref('usuarios/'+ userId).set({
+    database.ref('usuarios/'+ userId+ "/").set({
         "resp3": respuestas
     }, function (error) {
         if (error) {
