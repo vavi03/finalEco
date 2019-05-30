@@ -47,20 +47,13 @@ function juegocambio() {
 }
 
 botonCambio.addEventListener('click', function(){
+    resp6=true;
     console.log("encontre");
 });
 
 //firebase
-
+var resp6 = false;
 function escribirRespuestas() {
-
-    var resp6 = false;
-
-    
-  botonCambio.onClick= function(){
-      resp6= "true";
-  }
-   
 
     //firebase
     database.ref('usuarios').child(userId).set({
