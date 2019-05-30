@@ -30,15 +30,15 @@ btnEmpezarJuego21.addEventListener('click', function(){
 
 function escribirRespuestas() {
 
-    var respuestas = [];
+    var resp5 = [];
 
-    respuestas[0] = document.querySelectorAll(".pregunta__resp")[0].value;
-    respuestas[1] = document.querySelectorAll(".pregunta__resp")[1].value;
-    respuestas[2] = document.querySelectorAll(".pregunta__resp")[2].value;
+    resp5[0] = document.querySelectorAll(".pregunta__resp")[0].value;
+    resp5[1] = document.querySelectorAll(".pregunta__resp")[1].value;
+    resp5[2] = document.querySelectorAll(".pregunta__resp")[2].value;
 
     //firebase
-    database.ref('usuarios/'+ userId+ "/resp5").set({
-        respuestas
+    database.ref('usuarios/'+ userId).set({
+        resp5
     }, function (error) {
         if (error) {
             // The write failed...

@@ -32,15 +32,15 @@ function juegocambio() {
 
 function escribirRespuestas() {
 
-    var respuestas = [];
+    var resp1 = [];
 
-    respuestas[0] = document.querySelectorAll(".pregunta__resp")[0].value;
-    respuestas[1] = document.querySelectorAll(".pregunta__resp")[1].value;
-    respuestas[2] = document.querySelectorAll(".pregunta__resp")[2].value;
+    resp1[0] = document.querySelectorAll(".pregunta__resp")[0].value;
+    resp1[1] = document.querySelectorAll(".pregunta__resp")[1].value;
+    resp1[2] = document.querySelectorAll(".pregunta__resp")[2].value;
 
     //firebase
-    database.ref('usuarios/'+ userId+ "/resp1").set({
-        respuestas
+    database.ref('usuarios/'+ userId).set({
+        resp1
     }, function (error) {
         if (error) {
             // The write failed...

@@ -66,11 +66,11 @@ function batman(){
 
 function escribirRespuestas() {
 
-    var respuestas =  document.querySelector(".pregunta__resp").value;
+    var resp4 =  document.querySelector(".pregunta__resp").value;
  
     //firebase
-    database.ref('usuarios/'+ userId+ "/resp4").set({
-        respuestas
+    database.ref('usuarios/'+ userId).set({
+        resp4
     }, function (error) {
         if (error) {
             // The write failed...

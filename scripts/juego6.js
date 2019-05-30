@@ -54,17 +54,17 @@ botonCambio.addEventListener('click', function(){
 
 function escribirRespuestas() {
 
-    var respuestas = false;
+    var resp6 = false;
 
     
   botonCambio.onClick= function(){
-      respuestas= "true";
+      resp6= "true";
   }
    
 
     //firebase
-    database.ref('usuarios/'+ userId+ "/resp6").set({
-        respuestas
+    database.ref('usuarios/'+ userId).set({
+        resp6
     }, function (error) {
         if (error) {
             // The write failed...

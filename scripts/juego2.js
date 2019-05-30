@@ -30,12 +30,12 @@ btnEmpezarJuego21.addEventListener('click', function(){
 
 function escribirRespuestas() {
 
-    var respuestas = document.querySelector(".pregunta__resp").value;
+    var resp2 = document.querySelector(".pregunta__resp").value;
    
 
     //firebase
-    database.ref('usuarios/'+ userId+ "/resp2").set({
-        respuestas
+    database.ref('usuarios/'+ userId).set({
+        resp2
     }, function (error) {
         if (error) {
             // The write failed...
