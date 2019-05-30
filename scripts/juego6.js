@@ -53,6 +53,8 @@ function juegocambio() {
 botonCambio.addEventListener('click', function(){
     resp6=true+"";
     console.log("encontre");
+
+    escribirRespuestas();
 });
 
 //firebase
@@ -74,7 +76,3 @@ function escribirRespuestas() {
     });
     //
 }
-
-let inputEnviar = document.querySelector("#enviarA");
-
-inputEnviar.addEventListener('click',escribirRespuestas);
