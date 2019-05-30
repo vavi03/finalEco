@@ -38,6 +38,10 @@ function reducirTiempo() {
     if (contador < 10) {
         timer.innerHTML = "00:0" + contador;
     }
+
+    if(contador==0 && resp6==false){
+        window.location.reload(true);
+    }
 }
 
 function juegocambio() {
