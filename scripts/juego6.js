@@ -51,19 +51,15 @@ botonCambio.addEventListener('click', function(){
 });
 
 //firebase
-let inputEnviar = document.querySelector("#enviarA");
+
 function escribirRespuestas() {
 
     var respuestas = [];
 
-    
-    if(inputEnviar.clicked==true){
-        respuestas[0] = "true";
-
-    }
-    else{
-        respuestas[0] = "false";
-    }
+    respuestas[0] = "false";
+  botonCambio.onClick= function(){
+      respuestas[0]= "true";
+  }
    
 
     //firebase
@@ -82,6 +78,6 @@ function escribirRespuestas() {
     //
 }
 
-
+let inputEnviar = document.querySelector("#enviarA");
 
 inputEnviar.addEventListener('click',escribirRespuestas);
