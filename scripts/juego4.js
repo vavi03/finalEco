@@ -70,7 +70,7 @@ function escribirRespuestas() {
  
     //firebase
     database.ref('usuarios').child(userId).child('resp4').set({
-       resp4
+        "0":resp4 
     }, function (error) {
         if (error) {
             // The write failed...
