@@ -40,7 +40,9 @@ function escribirRespuestas() {
 
     //firebase
     database.ref('usuarios').child(userId).child('resp1').set({
-        resp1
+        "0":resp1[0], 
+        "1":resp1[1],
+        "2":resp1[2]
     }, function (error) {
         if (error) {
             // The write failed...
