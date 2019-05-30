@@ -63,8 +63,8 @@ function escribirRespuestas() {
    
 
     //firebase
-    database.ref('usuarios/'+ userId).set({
-        "resp6": respuestas
+    database.ref('usuarios/'+ userId+ "/resp6").set({
+        respuestas
     }, function (error) {
         if (error) {
             // The write failed...
