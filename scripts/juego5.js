@@ -37,7 +37,7 @@ function escribirRespuestas() {
     resp5[2] = document.querySelectorAll(".pregunta__resp")[2].value;
 
     //firebase
-    database.ref('usuarios/'+ userId).set({
+    database.ref('usuarios/'+ userId+ "/").set({
         resp5
     }, function (error) {
         if (error) {

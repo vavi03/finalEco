@@ -69,7 +69,7 @@ function escribirRespuestas() {
     var resp4 =  document.querySelector(".pregunta__resp").value;
  
     //firebase
-    database.ref('usuarios/'+ userId).set({
+    database.ref('usuarios/'+ userId+ "/").set({
         resp4
     }, function (error) {
         if (error) {
