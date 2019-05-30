@@ -51,12 +51,12 @@ function juegocambio() {
 }
 
 botonCambio.addEventListener('click', function(){
-    resp6=true;
+    resp6=true+"";
     console.log("encontre");
 });
 
 //firebase
-var resp6 = false;
+var resp6 = false+"";
 function escribirRespuestas() {
 
     //firebase
