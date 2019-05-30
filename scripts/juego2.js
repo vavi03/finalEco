@@ -30,9 +30,7 @@ btnEmpezarJuego21.addEventListener('click', function(){
 
 function escribirRespuestas() {
 
-    var respuestas = [];
-
-    respuestas[0] = document.querySelector(".pregunta__resp").value;
+    var respuestas = document.querySelector(".pregunta__resp").value;
    
 
     //firebase

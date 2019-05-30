@@ -54,11 +54,11 @@ botonCambio.addEventListener('click', function(){
 
 function escribirRespuestas() {
 
-    var respuestas = [];
+    var respuestas = false;
 
-    respuestas[0] = "false";
+    
   botonCambio.onClick= function(){
-      respuestas[0]= "true";
+      respuestas= "true";
   }
    
 

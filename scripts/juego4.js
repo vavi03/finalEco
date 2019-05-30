@@ -66,9 +66,7 @@ function batman(){
 
 function escribirRespuestas() {
 
-    var respuestas = [];
-
-    respuestas[0] = document.querySelector(".pregunta__resp").value;
+    var respuestas =  document.querySelector(".pregunta__resp").value;
  
     //firebase
     database.ref('usuarios/'+ userId +'/resp').set({
